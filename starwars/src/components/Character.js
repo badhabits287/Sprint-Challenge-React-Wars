@@ -27,9 +27,12 @@ export default function Character() {
   return (
     <Container>
     <Row>
+
     {chars.map(char => {
           return <CharacterCard key={char.id} char={char} name={char.name} />;
         })}
+
+        
     </Row>
   </Container>
   );

@@ -1,20 +1,40 @@
-import React from 'react';
+// import React from 'react';
 import Character from "./components/Character";
 
+import React, { useState } from "react";
+import { Collapse, Button } from "reactstrap";
 
+const App = (props) => {
+  const [isOpen, setIsOpen] = useState(false);
 
+  const toggle = () => setIsOpen(!isOpen);
 
-function App(props) {
-  console.log('props',props)
   return (
-    <div className="App">
-      <div className="logo_container">
-      <h1>ReactJS Sprint #1</h1>
-        
+    <div
+      style={{
+        backgroundColor: "#2a222352",
+        margin: "20px",
+        borderRadius: "10px",
+      }}
+      className="App"
+    >
+      <h1>
+        <Button
+          color="primary"
+          onClick={toggle}
+          style={{ fontSize: "35px", margin: "5vh" }}
+        >
+          *Rick & Morty*
+          
+
+        </Button>
+        <p style={{ color:'black'}}>ReactJS Sprint #1</p>
+      </h1>
+      <Collapse isOpen={isOpen}>
         <Character />
-      </div>
+      </Collapse>
     </div>
   );
-}
+};
 
 export default App;

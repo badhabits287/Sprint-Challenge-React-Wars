@@ -1,7 +1,5 @@
 import React from "react";
-import { Card, CardHeader, Col, CardBody, CardText } from "reactstrap";
-
-
+import { Card, CardHeader, Col,CardImg, CardBody, CardText } from "reactstrap";
 
 
   
@@ -9,9 +7,10 @@ const CharacterCard = ({ char }) => {
   console.log(char);
   return (
    
-    <Col xs="6" md="4" xl="3">
-      <Card  >
-      <img src={char.image} alt="profile pic" />
+
+    <Col sm={{ size: '2', offset: 1 }}>
+      <Card style={{ borderRadius:'10px'}} color='warning'>
+      <CardImg src={char.image} alt="profile pic" style={{ borderRadius:'100%'}} />
         <CardHeader>{char.name}</CardHeader>
         <CardBody>
           <CardText> {char.species}</CardText>

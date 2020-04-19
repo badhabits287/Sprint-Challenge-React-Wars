@@ -3,12 +3,24 @@ body {
   font-family: "Source Sans Pro", sans-serif;
   display:flex;
   background-image: url('./images/rm-bg.jpg');
+  
+ 
   padding: 0;
   margin: 0;
 }
+
+
+h1{
+  padding: 0;
+  margin: 0;
+  
+  align-content: center;text-align: center;
+}
 #root {
+  
   width: 100vw;
   height: 100vh;
   color: #2a2223;
   margin: 0;
 }
+
